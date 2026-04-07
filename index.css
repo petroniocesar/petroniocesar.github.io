@@ -1209,6 +1209,46 @@ body {
     font-size: 15px !important;
   }
 
+  /* Hero Mobile Fixes */
+  .hero-content {
+    text-align: center !important;
+    padding-top: var(--space-4) !important;
+  }
+  .hero-content h1, .hero-content p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 95% !important;
+  }
+  .hero-ctas {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: var(--space-4) !important;
+  }
+  .hero-ctas .btn-primary {
+    width: fit-content !important;
+    min-width: 280px !important;
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+  .floating-bullet {
+    display: none !important;
+  }
+
+  /* Text overflow protection */
+  .heading-hero {
+    word-break: break-word !important;
+    padding: 0 var(--space-2) !important;
+  }
+  
+  #contato .btn-primary {
+    white-space: nowrap !important;
+    padding: 14px 24px !important;
+    font-size: 15px !important;
+  }
+
   /* Ensure button icon does NOT scale */
   #contato .btn-primary img {
     transform: none !important;
