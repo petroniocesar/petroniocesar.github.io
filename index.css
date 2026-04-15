@@ -554,13 +554,13 @@ body {
   width: 100%;
   max-width: none;
   height: auto;
-  max-height: 70vh;
+  max-height: 95vh;
   object-fit: cover;
-  object-position: bottom;
-  margin-top: var(--space-6);
+  object-position: top;
+  margin-top: -180px;
   display: block;
-  transform-origin: bottom center;
-  transform: scale(1.15) translateY(4%);
+  transform-origin: top center;
+  transform: scale(1.5) translateY(-5%);
 }
 
 .hero p {
@@ -628,7 +628,11 @@ body {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: var(--space-6);
+    gap: 0;
+  }
+  .hero-side-image {
+    margin-top: -40%;
+    transform: scale(1.4);
   }
   .hero-content, .hero p {
     text-align: center;
@@ -642,6 +646,10 @@ body {
 }
 
 @media (max-width: 640px) {
+  .hero-side-image {
+    margin-top: -35%;
+    transform: scale(1.3);
+  }
   .hero-ctas {
     flex-direction: column;
     width: 100%;
@@ -728,6 +736,24 @@ body {
 .brand-item img[alt="Ray-Ban"]:hover {
   opacity: 1;
   transform: scale(1.58);
+}
+
+.brand-item img[alt="Mormaii"] {
+  transform: scale(0.9);
+}
+
+.brand-item img[alt="Mormaii"]:hover {
+  opacity: 1;
+  transform: scale(0.98);
+}
+
+.brand-item img[alt="Ana Hickmann"] {
+  transform: scale(1.1);
+}
+
+.brand-item img[alt="Ana Hickmann"]:hover {
+  opacity: 1;
+  transform: scale(1.18);
 }
 .section-inverted .card-feature {
   background: var(--color-bg-base);
