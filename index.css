@@ -2,14 +2,14 @@
 
 :root {
   /* 1. Paleta de Cores */
-  --color-brand-primary: #FE0A00;
-  --color-brand-secondary: #D10800;
-  --color-brand-accent: #FF3B33;
+  --color-brand-primary: #C30107;
+  --color-brand-secondary: #A00106;
+  --color-brand-accent: #E50108;
   
   --color-bg-base: #FFFFFF;
   --color-bg-surface: #FFF5F5;
   --color-bg-muted: #FFEBEB;
-  --color-bg-overlay: rgba(254, 10, 0, 0.04);
+  --color-bg-overlay: rgba(195, 1, 7, 0.04);
   
   --color-text-primary: #0F0A1E;
   --color-text-secondary: #3D3D3D;
@@ -17,15 +17,13 @@
   --color-text-on-brand: #FFFFFF;
   
   --color-border-default: #FFD6D6;
-  --color-border-focus: #FE0A00;
+  --color-border-focus: #C30107;
   --color-success: #22C55E;
-  --color-badge-new: #FE0A00;
+  --color-badge-new: #C30107;
 
-  --gradient-hero: 
-    radial-gradient(ellipse 100% 40% at 50% 0%, rgba(254, 10, 0, 0.15) 0%, transparent 70%),
-    radial-gradient(ellipse 100% 40% at 50% 100%, rgba(254, 10, 0, 0.15) 0%, transparent 70%);
-  --gradient-btn-primary: linear-gradient(135deg, #FE0A00 0%, #D10800 100%);
-  --gradient-divider: linear-gradient(90deg, transparent, #FE0A00, transparent);
+  --gradient-hero: none;
+  --gradient-btn-primary: linear-gradient(135deg, #C30107 0%, #A00106 100%);
+  --gradient-divider: linear-gradient(90deg, transparent, #C30107, transparent);
 
   /* 2. Tipografia */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -68,10 +66,10 @@
   --radius-full: 9999px;
 
   /* 5. Sombras */
-  --shadow-card: 0 2px 12px rgba(254, 10, 0, 0.08);
-  --shadow-card-hover: 0 8px 32px rgba(254, 10, 0, 0.14);
-  --shadow-btn: 0 4px 16px rgba(254, 10, 0, 0.30);
-  --shadow-input-focus: 0 0 0 3px rgba(254, 10, 0, 0.20);
+  --shadow-card: 0 2px 12px rgba(195, 1, 7, 0.08);
+  --shadow-card-hover: 0 8px 32px rgba(195, 1, 7, 0.14);
+  --shadow-btn: 0 4px 16px rgba(195, 1, 7, 0.30);
+  --shadow-input-focus: 0 0 0 3px rgba(195, 1, 7, 0.20);
   
   /* 7. Animations */
   --transition-fast: 0.15s ease;
@@ -327,8 +325,8 @@ body {
   background: var(--color-bg-surface) !important; /* Light reddish background */
   padding: 18px 24px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(254, 10, 0, 0.08); /* Subtle red border */
-  box-shadow: 0 10px 30px rgba(254, 10, 0, 0.06);
+  border: 1px solid rgba(195, 1, 7, 0.08); /* Subtle red border */
+  box-shadow: 0 10px 30px rgba(195, 1, 7, 0.06);
   margin-bottom: 0 !important;
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
@@ -337,7 +335,7 @@ body {
 
 .card-feature.mini:hover {
   transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(254, 10, 0, 0.12);
+  box-shadow: 0 15px 40px rgba(195, 1, 7, 0.12);
   background: white !important;
 }
 
@@ -588,7 +586,7 @@ body {
   letter-spacing: -0.01em;
   padding: 10px 20px;
   border-radius: var(--radius-full);
-  box-shadow: 0 8px 32px rgba(254, 10, 0, 0.15);
+  box-shadow: 0 8px 32px rgba(195, 1, 7, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.8);
   z-index: 10;
   white-space: nowrap;
@@ -615,6 +613,15 @@ body {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+.animate-float-soft {
+  animation: float-soft 4s ease-in-out infinite;
 }
 
 .hero-ctas {
@@ -663,8 +670,7 @@ body {
 
 /* Inverted Section */
 .section-inverted {
-  background: radial-gradient(ellipse at center, var(--color-brand-primary) 0%, #2B0200 130%);
-  box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.35);
+  background: var(--color-brand-primary);
   color: var(--color-text-on-brand);
 }
 .section-inverted .heading-section {
@@ -786,13 +792,13 @@ body {
 
 .card-feature.red-subtle {
   background: var(--color-bg-surface) !important;
-  border: 1px solid rgba(254, 10, 0, 0.08) !important;
-  box-shadow: 0 4px 20px rgba(254, 10, 0, 0.04);
+  border: 1px solid rgba(195, 1, 7, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(195, 1, 7, 0.04);
 }
 
 .card-feature.red-subtle:hover {
   background: white !important;
-  box-shadow: 0 12px 40px rgba(254, 10, 0, 0.08);
+  box-shadow: 0 12px 40px rgba(195, 1, 7, 0.08);
 }
 
 .card-feature:hover {
@@ -1230,7 +1236,7 @@ body {
     max-width: 100% !important;
     white-space: nowrap !important;
     padding: 14px 24px !important;
-    margin: var(--space-2) auto var(--space-10) auto !important; /* Menos espaço acima, MAIS espaço abaixo */
+    margin: var(--space-2) auto var(--space-4) auto !important; /* Reduzido de space-10 para space-4 */
     justify-content: center !important;
     font-size: 15px !important;
   }
@@ -1289,13 +1295,19 @@ body {
     padding: 0 !important;
   }
 
+  /* Reset wrapper scale from desktop */
+  #contato .container > div:last-child > div {
+    transform: none !important;
+  }
+
   /* Target ONLY the model image specifically */
-  #contato .container > div:last-child > img {
-    width: 100% !important;
+  #contato .container > div:last-child img {
+    width: 90% !important;
     height: auto !important;
-    transform: scale(1.35) !important;
-    transform-origin: bottom center !important;
+    transform: scale(1.7) translateX(12%) !important;
+    transform-origin: center center !important;
     display: block !important;
+    margin: -40px auto 5px auto !important;
   }
 }
 
